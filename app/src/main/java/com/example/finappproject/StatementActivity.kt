@@ -10,12 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.ArrayAdapter
-import android.widget.ListView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finappproject.data.DBHelper
-import com.example.finappproject.data.Transaction
 
 class StatementActivity : AppCompatActivity() {
     private lateinit var spinnerFilter: Spinner
@@ -61,9 +59,7 @@ class StatementActivity : AppCompatActivity() {
                 listTransactions(selectedFilter)
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>) {
-                Log.d("Spinner", "Nada selecionado")
-            }
+            override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
         val balance: Double = dbHelper.consultBalance()

@@ -5,54 +5,81 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cbd5f6"
     tools:context=".StatementActivity">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:text="Extrato"
+        android:layout_marginTop="60dp"
+        android:width="330dp"
+        android:fontFamily="@font/roboto"
+        android:text="Consultar Extrato"
+        android:textAlignment="center"
+        android:textColor="#242d60"
+        android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="97dp"
+        android:layout_height="32dp"
+        android:fontFamily="@font/roboto"
         android:text="Saldo:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:textAlignment="viewStart"
+        android:textColor="#242d60"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFilter"
+        app:layout_constraintTop_toTopOf="@+id/textViewBalance" />
 
     <TextView
         android:id="@+id/textViewBalance"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:text="0"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
+        android:layout_width="224dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:fontFamily="@font/roboto"
+        android:text="R$ 0,00"
+        android:textAlignment="textEnd"
+        android:textColor="#242d60"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFilter" />
 
     <Spinner
         android:id="@+id/spinnerFilter"
-        android:layout_width="278dp"
+        android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="@font/roboto"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Tipo da transação:"
+        android:textColor="#242d60"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerFilter"
+        app:layout_constraintStart_toStartOf="@+id/spinnerFilter" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewStatement"
-        android:layout_width="362dp"
-        android:layout_height="412dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="330dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="56dp"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerFilter"
         tools:listitem="@layout/recycler_view_item" />
@@ -61,11 +88,15 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="448dp"
+        android:layout_marginTop="452dp"
+        android:width="320dp"
+        android:backgroundTint="#7b83e0"
+        android:fontFamily="@font/roboto"
         android:onClick="finish"
         android:text="Voltar"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerFilter" />
 
@@ -73,12 +104,15 @@
         android:id="@+id/textViewNoData"
         android:layout_width="358dp"
         android:layout_height="40dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="32dp"
         android:text="Nenhuma transação realizada."
         android:textAlignment="center"
+        android:textColor="#242d60"
+        android:textSize="16sp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewBalance" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

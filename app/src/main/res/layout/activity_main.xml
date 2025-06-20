@@ -5,51 +5,101 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#cbd5f6"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
         android:text="FinApp"
+        android:textAlignment="viewStart"
+        android:textColor="#242d60"
+        android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.189" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:onClick="insertTransaction"
-        android:text="Cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="320dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#7b83e0"
+        android:drawableLeft="@drawable/power"
+        android:drawableTint="#FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:onClick="logout"
+        android:stateListAnimator="@null"
+        android:text="Sair"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="12dp"
+        app:cornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStatement" />
 
     <Button
         android:id="@+id/btnStatement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_width="320dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#7b83e0"
+        android:drawableLeft="@drawable/lupa"
+        android:drawableTint="#FFFFFF"
+        android:fontFamily="@font/roboto"
         android:onClick="consultStatement"
-        android:text="Extrato"
+        android:stateListAnimator="@null"
+        android:text="Consultar Extrato"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="12dp"
+        app:cornerRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
 
     <Button
-        android:id="@+id/btnLogout"
+        android:id="@+id/btnRegister"
+        android:layout_width="320dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#7b83e0"
+        android:drawableLeft="@drawable/mais"
+        android:drawableTint="#FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:onClick="insertTransaction"
+        android:stateListAnimator="@null"
+        android:text="Cadastrar Transação"
+        android:textAlignment="textStart"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationZ="12dp"
+        app:cornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:onClick="logout"
-        android:text="Sair"
+        android:layout_marginTop="48dp"
+        android:tint="#242d60"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStatement" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLogout"
+        app:srcCompat="@drawable/grafico" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

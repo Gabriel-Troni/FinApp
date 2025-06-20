@@ -11,7 +11,7 @@ class DBHelper(context: Context):
 
         companion object {
             private const val DATABASE_NAME = "finapp.db"
-            private const val DATABASE_VERSION = 2
+            private const val DATABASE_VERSION = 3
             private const val TABLE_NAME = "transactions"
         }
 
