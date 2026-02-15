@@ -26,8 +26,10 @@
 
 ## 📸 Screenshots
 
-<img src="docs/screenshots/home.PNG" alt="Tela principal" width="250" />
-<img src="docs/screenshots/statement.PNG" alt="Tela de Extrato" width="250" />
+<p>
+  <img src="docs/screenshots/home.PNG" alt="Tela principal" width="250" />
+  <img src="docs/screenshots/statement.PNG" alt="Tela de Extrato" width="250" />
+</p>
 
 ## 👥 Autores
 
